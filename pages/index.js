@@ -20,7 +20,7 @@ export default function Home({results}) {
   )
 }
 
-export async function getServerSideProps(context){
+export async function getStaticProps(context){
 const genre = context.query.genre;
 const request = await fetch(`https://api.themoviedb.org/3${
   requests[genre]?.url || request.fetchTrending.url
